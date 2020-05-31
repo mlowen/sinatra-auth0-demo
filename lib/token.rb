@@ -26,17 +26,18 @@ class Token
   attr_reader :scopes
   attr_reader :expires_at
   attr_reader :issued_at
+  attr_reader :payload
 
   def valid?
     @valid
   end
 
-  def missing_method(method, *arguments, &block)
-    @payload.include(method.to_s) ? @payload[method.to_s] : super
+  def method_missing(method, *arguments, &block)
+    @payload.include?(method.to_s) ? @payload[method.to_s] : super
   end
 
-  def respond_to(method, include_private = false)
-    @payload.include(method.to_s) || super
+  def respond_to_missing?(method, include_private = false)
+    @payload.include?(method.to_s) || super
   end
 
   private

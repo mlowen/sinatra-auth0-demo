@@ -11,7 +11,7 @@ Sequel::Model.db = Sequel.connect('sqlite://auth0-test.db')
 
 require_relative 'db/models/user'
 require_relative 'handlers'
-require_relative 'helpers'
+require_relative 'app_helpers'
 
 class Auth0DemoApplication < Sinatra::Base
   OmniAuth.config.allowed_request_methods = [:post]
