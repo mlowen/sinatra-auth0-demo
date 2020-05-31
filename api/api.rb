@@ -1,7 +1,7 @@
 require 'sinatra/base'
 
 require_relative 'lib/token_middleware'
-require_relative 'api_helpers'
+require_relative 'helpers'
 
 class Auth0DemoAPI < Sinatra::Base
   use TokenMiddleware

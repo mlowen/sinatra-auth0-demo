@@ -4,7 +4,7 @@ namespace :db do
   task :migrate do
     require 'sequel'
 
-    migrations = File.join(__dir__, 'db/migrations')
+    migrations = File.join(__dir__, 'app/db/migrations')
     database = Sequel.connect('sqlite://auth0-test.db')
 
     Sequel.extension :migration
