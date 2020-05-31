@@ -16,6 +16,6 @@ class TokenMiddleware
 
     return [401, error_headers, ['Invalid token']] unless token.valid?
 
-    @app.call(env)
+    @app.call(env.merge('AUTH_TOKEN' => token))
   end
 end
