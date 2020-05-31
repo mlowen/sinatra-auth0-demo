@@ -13,7 +13,7 @@ require_relative 'db/models/user'
 require_relative 'handlers'
 require_relative 'helpers'
 
-class Auth0Demo < Sinatra::Base
+class Auth0DemoApplication < Sinatra::Base
   OmniAuth.config.allowed_request_methods = [:post]
 
   use Rack::Session::Cookie, secret: ENV['COOKIE_SECRET']

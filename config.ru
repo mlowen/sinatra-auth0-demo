@@ -1,3 +1,7 @@
 require_relative 'app'
+require_relative 'api'
 
-run Auth0Demo
+run Rack::URLMap.new(
+  '/' => Auth0DemoApplication,
+  '/api' => Auth0DemoAPI
+)
