@@ -1,0 +1,5 @@
+<p>You are currently unauthenticated</p>
+<form method="POST" action="/auth/auth0">
+  <input type="hidden" name="authenticity_token" value="<%= env['rack.session'][:csrf] %>" />
+  <input type="submit" value="Sign in"/>
+</form>
