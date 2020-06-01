@@ -1,2 +1,18 @@
 <p>You are currently authenticated as <%= current_user.email %></p>
 <p><a href="/sign-out">Click here</a> to sign out.</p>
+<p><strong>From API:</strong>&nbsp;<span id="from-api"></span></p>
+<p><strong>From BFF:</strong>&nbsp;<span id="from-bff"></span></p>
+
+<script type="text/javascript">
+  fetch('/token')
+    .then(response => response.json())
+    .then(data => fetch('http://localhost:9293/success', {
+      headers: { 'Authorization': 'Bearer ' + data.token }
+    }))
+    .then(response => response.text())
+    .then(data => document.getElementById('from-api').innerHTML = data);
+
+  fetch('/api/success')
+    .then(response => response.text())
+    .then(data => document.getElementById('from-bff').innerHTML = data);
+</script>

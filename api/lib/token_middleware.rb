@@ -6,6 +6,8 @@ class TokenMiddleware
   end
 
   def call(env)
+    return @app.call(env) if env['REQUEST_METHOD'] == 'OPTIONS'
+
     prefix = 'Bearer '
     auth_header = env['HTTP_AUTHORIZATION']
     error_headers = { "Content-Type" => "text/plain" }
