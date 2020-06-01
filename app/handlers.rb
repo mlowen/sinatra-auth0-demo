@@ -19,5 +19,18 @@ module Handlers
 
       json token
     end
+
+    app.get %r{/api/(.*)} do |api_path|
+      authenticated!
+
+      uri = URI("#{ENV['AUTH0_AUDIENCE']}/#{api_path}")
+      req = Net::HTTP::Get.new(uri)
+      req["Authorization"] = "Bearer #{token}"
+
+      result = Net::HTTP.start(uri.hostname, uri.port) { |http| http.request(req) }
+
+      status result.code
+      result.body
+    end
   end
 end

@@ -8,7 +8,7 @@ class Auth0DemoAPI < Sinatra::Base
 
   helpers Helpers
 
-  get '/' do
+  get '/success' do
     can! 'profile'
 
     "Hello world #{token.sub}"
