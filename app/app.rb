@@ -28,7 +28,7 @@ class Auth0DemoApplication < Sinatra::Base
       callback_path: '/auth/callback',
       authorize_params: {
         scope: 'openid email profile offline_access',
-        audience: 'http://localhost:9292'
+        audience: ENV['AUTH0_AUDIENCE']
       }
     )
   end

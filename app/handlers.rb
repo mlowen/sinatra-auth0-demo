@@ -11,7 +11,7 @@ module Handlers
 
     app.get '/sign-out' do
       warden.logout
-      redirect "https://#{ENV['AUTH0_DOMAIN']}/v2/logout?client_id=#{ENV['AUTH0_ID']}"
+      redirect "#{ENV['AUTH0_DOMAIN']}/v2/logout?client_id=#{ENV['AUTH0_ID']}"
     end
   end
 end

@@ -11,7 +11,7 @@ class Token
     @valid = true
     @payload, @header = JWT.decode(@token, nil, true,
                                    algorithm: 'RS256',
-                                   iss: ENV['AUTH0_ISSUER'],
+                                   iss: ENV['AUTH0_DOMAIN'],
                                    aud: ENV['AUTH0_AUDIENCE'],
                                    verify_aud: true) { |header| jwks[header['kid']] }
 
