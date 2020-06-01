@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    backports (3.17.2)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     hashie (4.1.0)
@@ -35,6 +36,13 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.8.1)
       tilt (~> 2.0)
+    sinatra-contrib (2.0.8.1)
+      backports (>= 2.8.2)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.0.8.1)
+      sinatra (= 2.0.8.1)
+      tilt (~> 2.0)
     sqlite3 (1.4.2)
     tilt (2.0.10)
     warden (1.2.8)
@@ -52,6 +60,7 @@ DEPENDENCIES
   rake (~> 13.0, >= 13.0.1)
   sequel (~> 5.32)
   sinatra (~> 2.0, >= 2.0.8.1)
+  sinatra-contrib (~> 2.0, >= 2.0.8.1)
   sqlite3 (~> 1.4, >= 1.4.2)
   warden (~> 1.2, >= 1.2.8)
 

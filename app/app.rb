@@ -2,6 +2,7 @@ require 'rack-protection'
 
 require 'sequel'
 require 'sinatra/base'
+require 'sinatra/json'
 
 require 'omniauth'
 require 'omniauth-auth0'

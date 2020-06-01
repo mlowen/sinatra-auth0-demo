@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'jwt', '~> 2.2', '>= 2.2.1'
 gem 'omniauth', '~> 1.9', '>= 1.9.1'
 gem 'omniauth-auth0', '~> 2.3', '>= 2.3.1'
 gem 'rack', '~> 2.2', '>= 2.2.2'
 gem 'rake', '~> 13.0', '>= 13.0.1'
 gem 'sequel', '~> 5.32'
 gem 'sinatra', '~> 2.0', '>= 2.0.8.1'
+gem 'sinatra-contrib', '~> 2.0', '>= 2.0.8.1'
 gem 'sqlite3', '~> 1.4', '>= 1.4.2'
 gem 'warden', '~> 1.2', '>= 1.2.8'
-gem 'jwt', '~> 2.2', '>= 2.2.1'

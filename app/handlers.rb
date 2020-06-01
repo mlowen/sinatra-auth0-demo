@@ -13,5 +13,11 @@ module Handlers
       warden.logout
       redirect "#{ENV['AUTH0_DOMAIN']}/v2/logout?client_id=#{ENV['AUTH0_ID']}"
     end
+
+    app.get '/token' do
+      authenticated!
+
+      json token
+    end
   end
 end
