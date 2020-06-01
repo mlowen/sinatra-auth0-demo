@@ -12,5 +12,14 @@ module Models
 
       super
     end
+
+    def update_tokens(token_data)
+      self.access_token = token_data['access_token']
+      self.id_token = token_data['id_token']
+      self.refresh_token = token_data['refresh_token']
+      self.token_expires_at = Time.now + token_data['expires_in']
+
+      self.save
+    end
   end
 end
