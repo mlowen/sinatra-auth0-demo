@@ -45,7 +45,7 @@ class Token
   def jwks
     return @@jwks unless @@jwks.nil?
 
-    raw = JSON.parse(Net::HTTP.get(URI(ENV['AUTH0_JWKS_URI'])))
+    raw = JSON.parse(Net::HTTP.get(URI("#{ENV['AUTH0_DOMAIN']}/.well-known/jwks.json")))
     pairs = raw['keys'].map do |k|
       [
         k['kid'],
