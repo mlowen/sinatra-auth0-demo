@@ -25,7 +25,7 @@ GEM
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
-    rack (2.2.2)
+    rack (2.2.3)
     rack-protection (2.0.8.1)
       rack
     rake (13.0.1)
@@ -56,7 +56,7 @@ DEPENDENCIES
   jwt (~> 2.2, >= 2.2.1)
   omniauth (~> 1.9, >= 1.9.1)
   omniauth-auth0 (~> 2.3, >= 2.3.1)
-  rack (~> 2.2, >= 2.2.2)
+  rack (~> 2.2)
   rake (~> 13.0, >= 13.0.1)
   sequel (~> 5.32)
   sinatra (~> 2.0, >= 2.0.8.1)
