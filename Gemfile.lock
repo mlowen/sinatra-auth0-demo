@@ -2,8 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.18.1)
-    faraday (1.0.1)
+    faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
+      ruby2_keywords
     hashie (4.1.0)
     jwt (2.2.1)
     multi_json (1.15.0)
@@ -20,10 +21,10 @@ GEM
     omniauth (1.9.1)
       hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
-    omniauth-auth0 (2.3.1)
+    omniauth-auth0 (2.4.1)
       omniauth-oauth2 (~> 1.5)
-    omniauth-oauth2 (1.6.0)
-      oauth2 (~> 1.1)
+    omniauth-oauth2 (1.7.0)
+      oauth2 (~> 1.4)
       omniauth (~> 1.9)
     rack (2.2.3)
     rack-protection (2.0.8.1)
@@ -55,7 +56,7 @@ PLATFORMS
 DEPENDENCIES
   jwt (~> 2.2, >= 2.2.1)
   omniauth (~> 1.9, >= 1.9.1)
-  omniauth-auth0 (~> 2.3, >= 2.3.1)
+  omniauth-auth0 (~> 2.4)
   rack (~> 2.2, >= 2.2.3)
   rake (~> 13.0, >= 13.0.1)
   sequel (~> 5.34)
