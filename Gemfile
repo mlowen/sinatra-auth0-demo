@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jwt', '~> 2.2', '>= 2.2.1'
-gem 'omniauth', '~> 1.9', '>= 1.9.1'
+gem 'omniauth', '~> 1.9'
 gem 'omniauth-auth0', '~> 2.3', '>= 2.3.1'
 gem 'rack', '~> 2.2', '>= 2.2.3'
 gem 'rake', '~> 13.0', '>= 13.0.1'
